@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🕒 Time Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center">
+            <h1>🕒 Time Tracker</h1>
+        </header>
+
+        <section id="exportButtons" class="text-right">
+            <button id="exportExcel">Excel Export</button>
+            <button id="exportImage">IMG Export</button>
+        </section>
+
+        <section id="controls" class="text-center">
+            <button id="prevWeek">◀</button>
+            <span id="currentWeek"></span>
+            <button id="nextWeek">▶</button>
+        </section>
+
+        <section id="weeklyGoalSection" class="text-center">
+            <div class = "weeklyGoal_input">
+                <h2>목표</h2>
+                <input type="text" id="weeklyGoalInput" placeholder="이번 주 목표를 입력하세요">
+                <button id="setWeeklyGoal">설정</button>
+            </div>
+            <div id="weeklyGoalDisplay" ></div>
+        </section>
+
+
+        <section id="habitTracker">
+            <!-- <h2 class="text-center">습관 추적</h2> -->
+            <button id="saveHabits" class="save-button">습관 저장</button>
+            <table id="habit-table">
+                <thead>
+                    <tr>
+                        <th>습관</th>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody id="habit-rows"></tbody>
+            </table>
+            
+        </section>
+
+        <section id="scheduleSection">
+            <!-- <h2 class="text-center">스케줄</h2> -->
+            <table id="schedule">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-center">일정 추가</h2>
+            <input type="text" id="taskInput" placeholder="일정 내용">
+            <input type="number" id="durationInput" placeholder="소요 시간 (시간 단위)">
+            <div id="colorPalette"></div>
+            <button id="addTask">일정 추가</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
